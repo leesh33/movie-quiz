@@ -6,9 +6,9 @@
   var STORE_KEY = "theko.stats.v1";
 
   var MODES = [
-    { id: "quote", emoji: "💬", name: "명대사 → 영화 맞추기", sub: "대사 한 줄, 영화 제목 4지선다", desc: "대사를 읽고 영화 맞히기" },
-    { id: "scene", emoji: "🖼️", name: "명장면 → 대사 맞추기", sub: "장면 이미지, 진짜 대사 4지선다", desc: "장면을 보고 대사 맞히기" },
-    { id: "mix",   emoji: "🎲", name: "혼합 퀴즈", sub: "두 유형 섞어서 10문제", desc: "명대사 + 명장면 10문제" }
+    { id: "quote", emoji: "💬", name: "명대사", sub: "→ 영화", desc: "대사를 읽고 영화 맞히기" },
+    { id: "scene", emoji: "🖼️", name: "명장면", sub: "→ 대사", desc: "장면을 보고 대사 맞히기" },
+    { id: "mix",   emoji: "🎲", name: "혼합", sub: "10문제", desc: "명대사 + 명장면 섞어서" }
   ];
 
   var state = {
