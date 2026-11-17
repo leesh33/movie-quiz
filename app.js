@@ -152,8 +152,8 @@
           '<span class="g-emoji" aria-hidden="true">' + g.emoji + "</span>" +
           '<span class="g-name">' + g.name + "</span>" +
           '<span class="g-desc">' + g.desc + "</span>" +
-          '<span class="g-meta"><span class="g-count">' + size + "문제</span></span>" +
-          '<span class="g-meta"><span class="g-best">' + bestText(rec) + "</span></span>";
+          '<span class="g-meta"><span class="g-count">' + size + "문제</span>" +
+          '<span class="g-best">' + bestText(rec) + "</span></span>";
       }
 
       b.addEventListener("click", function () {
@@ -384,7 +384,7 @@
     el("r-grade").textContent = grade.title;
     el("r-sub").textContent =
       total + "문제 중 " + correct + "문제 정답 · 정답률 " + acc + "%" +
-      (state.maxCombo >= 2 ? " · 최고 " + state.maxCombo + "연속" : "");
+      (state.maxCombo >= 2 ? " · 최고 " + state.maxCombo + "연속 정답" : "");
     el("score-ring").style.setProperty("--pct", acc);
 
     var best = el("r-best");
