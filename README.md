@@ -3,7 +3,8 @@
 한국 영화의 명대사 한 줄, 그리고 명장면 한 컷으로 즐기는 4지선다 퀴즈.
 빌드 도구 없이 정적 파일만으로 동작하고, 아이폰 사파리(390×844) 기준으로 만들었습니다.
 
-- 실서버: **https://movie-quiz.vercel.app**
+- 실서버: **https://movie-quiz-bice.vercel.app** (Vercel 프로젝트 `movie-quiz`, 팀 leesh33)
+- 미러: https://leesh33.github.io/movie-quiz/ (GitHub Pages)
 - 저장소: https://github.com/leesh33/movie-quiz
 - 백엔드 없음 · 최고 점수는 브라우저 `localStorage`(`theko.stats.v1`)에 저장
 
@@ -67,4 +68,13 @@ movie-quiz-web/
 ## 검증
 
 - `scripts/check_data.py` : JS 문법 + 문제 은행 정합성(정답/보기/이미지/중복) 점검
-- 390×844 뷰포트에서 홈·명대사·명장면·결과 화면 스크린샷 촬영, 콘솔 에러 0건 확인
+- 390×844 뷰포트(iPhone UA)에서 홈·명대사·명장면·결과 화면 스크린샷 촬영,
+  장르 5종 각 10문제 완주 + 전체 명장면 10문제 + 혼합 10문제, 콘솔 에러 0건 확인
+- 검증 스크린샷: `downloads/theko-vercel/` (배포본), `downloads/theko-live/` (Pages)
+
+## 배포 방식
+
+Vercel의 GitHub 연동(Vercel GitHub App)이 `reelpin`·`life-turn-sim` 두 저장소만 허용된 상태라,
+GitHub 푸시 자동배포 대신 **파일 업로드 방식**으로 배포했습니다.
+프로젝트에 연결된 Git 저장소가 없으므로, 수정 시에는 `movie-quiz-web/` 폴더를 다시 zip으로 묶어
+Vercel `New Project → Deploy to an existing project`에서 `movie-quiz`를 골라 올리면 됩니다.
